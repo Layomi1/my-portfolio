@@ -65,6 +65,12 @@ p{
   font-size: 1.2rem;
 }
 
+
+figure img {
+  width: 100%;
+  object-fit: cover;
+}
+
 p.ellipse {
 background: linear-gradient(20deg, rgba(174,192,203,1) 0%, rgba(174,192,203,1) 35%, rgba(255,255,255,1) 100%);
   width:100%;
@@ -192,10 +198,9 @@ article.title{
   max-width: 650px;
 }
 
-figure img {
-  width: 100%;
+.home figure img {
   border-radius: 50%;
-  object-fit: cover;
+  /* object-fit: cover; */
 }
 
   /* about starts */
@@ -368,9 +373,14 @@ figure img {
    /* service ends */
 
    /* portfolio starts */
+   section.portfolio{
+    padding-bottom: 150px;
+    
+   }
    .portfolio-title{
     display: flex;
     justify-content: space-between;
+    margin-bottom: 100px;
    }
 
    .portfolio-title i{
@@ -378,8 +388,30 @@ figure img {
     font-size: 30px;
    }
 
+   .portfolio .projects{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+   }
 
+  .portfolio .projects figure {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    gap: 20px;
+    text-align: center;
+    box-shadow: 10px 21px 20px -18px rgba(0,0,0,0.75);
+   background: var(--global-color-2);
+   padding-bottom: 10px;
+  }
 
+.portfolio .projects figure figcaption a{
+  color: var(--text-color-2);
+  font-style: italic;
+  
+}
+  
    /* portfolio ends */
 
    /* contact starts */
@@ -606,6 +638,19 @@ figure img {
     padding-right: 0px;
 
   }
+  /* portfolio starts */
+  section.portfolio{
+    padding-bottom: 70px;
+  } 
+   .portfolio .title{
+    padding-top:70px;
+   }
+  
+  .portfolio .projects{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+   }
+  /* portfolio ends */
  
    /* contact and footer */
    section.contact-me{
@@ -764,8 +809,12 @@ figure img {
   
    /* service ends */
 
-   /* portfolio starts */
-   /* portfolio end */
+    /* portfolio starts */
+  .portfolio .projects{
+    grid-template-columns: 1fr;
+    gap: 50px;
+   }
+  /* portfolio ends */
 
    /* contact */
    section.contact-me{
